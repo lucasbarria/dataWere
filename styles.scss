@@ -1,0 +1,1053 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+// ---------------LOGIN--------------------//
+
+.seccion-login {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  .contenedor-form {
+    position: relative;
+    background: #59626b 50%;
+    width: 100%;
+    max-width: 500px;
+    margin: 48px auto;
+    color: #ffffff;
+    border-radius: 5px;
+    font-family: "Open Sans", sans-serif;
+    h2 {
+      margin: 0 0 28px 0;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1px;
+    }
+    .input-user,
+    .input-pass-log {
+      outline: none;
+      background: rgba(0, 0, 0, 0.5);
+      display: block;
+      width: 100%;
+      padding: 10px 15px;
+      color: #ffffff;
+      border: none;
+      border-radius: 2px;
+      border-bottom: 4px solid #072f63;
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0px 0px 20px -14px;
+      transition: all 0.5s ease;
+      &:focus {
+        border-bottom: 4px solid #0366fa;
+      }
+    }
+    .input-login-btn {
+      background: #072f63;
+      color: #ffffff;
+      border: none;
+      width: 100%;
+      padding: 10px 0px;
+      font-weight: normal;
+      font-family: "Open Sans", sans-serif;
+      letter-spacing: 1px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      &:hover {
+        background: #0366fa;
+      }
+    }
+    .formulario {
+      padding: 40px;
+    }
+  }
+}
+
+// ---------------HEADER--------------------//
+
+.header {
+  width: 100%;
+  height: 100px;
+  background: #246355;
+  display: none;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  .logo {
+    width: 95.1px;
+    height: 83.1px;
+    margin-top: 9px;
+    margin-left: 2.2%;
+    font-family: "Open Sans", sans-serif;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .menu {
+    .lista {
+      display: flex;
+      flex-flow: row nowrap;
+      margin-top: 33px;
+      .li-contactos,
+      .li-companias,
+      .li-usuarios,
+      .li-region {
+        font-family: "Open Sans", sans-serif;
+        color: #ffffff;
+        font-size: 21px;
+        padding-right: 55px;
+        list-style: none;
+        .a-contactos,
+        .a-companias,
+        .a-usuarios,
+        .a-region {
+          color: #ffffff;
+          text-decoration: none;
+          height: 39px;
+          display: inline-block;
+          cursor: pointer;
+          &:hover {
+            border-bottom: 5px solid #01b36e;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+// SECCION DE CONTACTOS //////////////////////////////////////////////////
+
+.seccion-contactos {
+  width: 100%;
+  margin: auto;
+  .tituloContactos {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin: auto;
+    width: 216px;
+  }
+  .tablaContactos {
+    background: #59626b;
+    border-collapse: collapse;
+    color: #ffffff;
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+    th {
+      border: solid 1px black;
+      font-family: "Poppins", sans-serif;
+      font-weight: bold;
+      padding: 20px;
+    }
+    td {
+      border: solid 1px black;
+      font-family: "Poppins", sans-serif;
+      padding: 20px;
+    }
+    thead {
+      background: #246355;
+      border-bottom: 5px solid #0f362d;
+    }
+    tr:nth-child(even) {
+      background: rgb(160, 160, 160);
+    }
+    tr:hover {
+      background: #369681;
+      color: white;
+    }
+  }
+  .btn-editar {
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    float: right;
+    padding: 10px;
+    margin: 10px 10px;
+    transition: all ease 0.3s;
+    &:hover {
+      color: white;
+      background: #369681;
+    }
+  }
+}
+
+
+// VENTANA DE EDITAR CONTACTOS/////////////////////////////////
+
+.ventana {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .popUp-editar {
+    background: #f8f8f8;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    padding: 20px;
+    width: 600px;
+    .titulo-editar-contactos {
+      font-size: 26px;
+      font-weight: 300;
+      font-family: "Poppins", sans-serif;
+      margin-bottom: 40px;
+      color: #0f362d;
+    }
+    .contenedor-input {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around;
+      .input-editar {
+        width: 100%;
+        margin-bottom: 20px;
+        height: 38px;
+        line-height: 52px;
+        font-size: 18px;
+        font-family: "Poppins", sans-serif;
+        border: 1px solid #BBBBBB;
+      }
+      .label-editar {
+        color: #0f362d;
+        font-size: 15px;
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 5px;
+      }
+    }
+    .btn-confirmar-editar {
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: "Poppins", sans-serif;
+      font-weight: bold;
+      float: right;
+      padding: 10px;
+      margin: 10px 10px;
+      transition: all ease 0.3s;
+      &:hover {
+        color: white;
+        background: #369681;
+      }
+    }
+    #btn-cerrar {
+      float: right;
+      font-size: 20px;
+      position: relative;
+      bottom: 70px;
+      color: #0f362d;
+      cursor: pointer;
+    }
+  }
+}
+
+
+// SECCION COMPANIAS///////////////////////////////////////
+
+.seccion-companias {
+  width: 100%;
+  .tituloCompanias {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin: auto;
+    width: 216px;
+  }
+  .tablaCompanias {
+    background: #59626b;
+    border-collapse: collapse;
+    color: #ffffff;
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+    th {
+      border: solid 1px black;
+      font-family: "Poppins", sans-serif;
+      font-weight: bold;
+      padding: 20px;
+    }
+    td {
+      border: solid 1px black;
+      font-family: "Poppins", sans-serif;
+      padding: 20px;
+    }
+    thead {
+      background: #246355;
+      border-bottom: 5px solid #0f362d;
+    }
+    tr:nth-child(even) {
+      background: rgb(160, 160, 160);
+    }
+    tr:hover {
+      background: #369681;
+      color: white;
+    }
+  }
+  .btn-editar {
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    float: right;
+    padding: 10px;
+    margin: 10px 10px;
+    transition: all ease 0.3s;
+    &:hover {
+      color: white;
+      background: #369681;
+    }
+  }
+}
+
+
+// VENTANA DE EDITAR companias/////////////////////////////////
+
+.ventana {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .popUp-editar {
+    background: #f8f8f8;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    padding: 20px;
+    width: 600px;
+    .titulo-editar-compania {
+      font-size: 26px;
+      font-weight: 300;
+      font-family: "Poppins", sans-serif;
+      margin-bottom: 40px;
+      color: #0f362d;
+    }
+    .contenedor-input {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around;
+      .input-editar {
+        width: 100%;
+        margin-bottom: 20px;
+        height: 38px;
+        line-height: 52px;
+        font-size: 18px;
+        font-family: "Poppins", sans-serif;
+        border: 1px solid #BBBBBB;
+      }
+      .label-editar {
+        color: #0f362d;
+        font-size: 15px;
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 5px;
+      }
+    }
+    .btn-confirmar-editar {
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: "Poppins", sans-serif;
+      font-weight: bold;
+      float: right;
+      padding: 10px;
+      margin: 10px 10px;
+      transition: all ease 0.3s;
+      &:hover {
+        color: white;
+        background: #369681;
+      }
+    }
+    #btn-cerrar-editar-compania {
+      float: right;
+      font-size: 20px;
+      position: relative;
+      bottom: 70px;
+      color: #0f362d;
+      cursor: pointer;
+    }
+  }
+}
+
+
+// ESTILOS DEL BOTON DE CERRAR EL POP UP DE EDITAR Y CREAR USUARIOS
+
+
+#btn-cerrar-editar-usuario {
+  float: right;
+  font-size: 20px;
+  position: relative;
+  bottom: 70px;
+  color: #0f362d;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.search-section {
+  display: none;
+  .div-title {
+    width: 118.7px;
+    height: auto;
+    margin-top: 39.6px;
+    margin-left: 29.4px;
+    .title {
+      font-family: "Open Sans", sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+
+  .form {
+    width: 552px;
+    height: auto;
+    .search-input {
+      width: 502px;
+      height: 41px;
+      margin-top: 20.3px;
+      margin-left: 29.5px;
+      border: 1px solid #cccccc;
+      border-radius: 3.5px;
+    }
+    .conteiner-arrow {
+      color: rgba(0, 0, 0, 0.54);
+      margin-left: -31px;
+      cursor: pointer;
+    }
+    .conteiner-iconSearch {
+      width: 41px;
+      height: 41px;
+      border: #00000038 1px solid;
+      border-radius: 3.5px;
+      margin-left: 98%;
+      margin-top: -43px;
+      cursor: pointer;
+      #icon-search {
+        width: 17.5px;
+        height: 17.5px;
+        color: #0683f9;
+        margin-left: 13px;
+        margin-top: 13px;
+      }
+    }
+  }
+}
+
+// ESTILOS DEL DESPLEGABLE DE CONTACTOS //
+
+// .div-conteiner {
+//   display: none;
+// }
+
+.div-conteiner {
+  width: 503px;
+  height: 375px;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  margin-left: 29.4px;
+  margin-top: 4.5px;
+  display: none;
+  .div-name-contact {
+    margin-left: 17.2px;
+    margin-top: 23.9px;
+    .name-contact {
+      font-family: "Open Sans", sans-serif;
+      font-size: 10px;
+    }
+    .input-name {
+      width: 312px;
+      margin-left: 36.5px;
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+      font-size: 10px;
+    }
+  }
+  .div-cargo {
+    margin-left: 17.2px;
+    margin-top: 23.9px;
+    .contact-cargo {
+      font-family: "Open Sans", sans-serif;
+      font-size: 10px;
+    }
+    .input-cargo {
+      width: 312px;
+      margin-left: 107.5px;
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+      font-size: 10px;
+    }
+  }
+  .div-pais-region {
+    margin-left: 17.2px;
+    margin-top: 23.9px;
+    .name-pais-region {
+      font-family: "Open Sans", sans-serif;
+      font-size: 10px;
+    }
+    .input-pais-region {
+      width: 190px;
+      height: 35.5px;
+      margin-left: 79.9px;
+      font-size: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 2px;
+    }
+    .conteiner-icon {
+      margin-left: -22px;
+      cursor: pointer;
+      #arrow-icon {
+        width: 10px;
+        height: 5px;
+        color: rgba(0, 0, 0, 0.54);
+      }
+    }
+  }
+  .div-compania {
+    margin-left: 17.2px;
+    margin-top: 23.9px;
+    .name-compania {
+      font-family: "Open Sans", sans-serif;
+      font-size: 10px;
+    }
+    .input-compania {
+      width: 190px;
+      height: 35.5px;
+      margin-left: 87.9px;
+      font-size: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 2px;
+    }
+    .conteiner-icon-compania {
+      margin-left: -22px;
+      cursor: pointer;
+      #arrow-icon-compania {
+        width: 10px;
+        height: 5px;
+        color: rgba(0, 0, 0, 0.54);
+      }
+    }
+  }
+  .div-canal-fav {
+    margin-left: 17.2px;
+    margin-top: 23.9px;
+    .name-canal-fav {
+      font-family: "Open Sans", sans-serif;
+      font-size: 10px;
+    }
+    .input-canal-fav {
+      width: 190px;
+      height: 35.5px;
+      margin-left: 69.9px;
+      font-size: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 2px;
+    }
+    .conteiner-icon-canal-fav {
+      margin-left: -22px;
+      cursor: pointer;
+      #arrow-icon-canal-fav {
+        width: 10px;
+        height: 5px;
+        color: rgba(0, 0, 0, 0.54);
+      }
+    }
+  }
+  .div-interes {
+    margin-left: 17.2px;
+    margin-top: 23.9px;
+    .name-interes {
+      font-family: "Open Sans", sans-serif;
+      font-size: 10px;
+    }
+    .input-interes {
+      width: 190px;
+      height: 35.5px;
+      margin-left: 104.9px;
+      font-size: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 2px;
+    }
+    .conteiner-icon-interes {
+      margin-left: -22px;
+      cursor: pointer;
+      #arrow-icon-interes {
+        width: 10px;
+        height: 5px;
+        color: rgba(0, 0, 0, 0.54);
+      }
+    }
+  }
+}
+
+.export-btn {
+  width: 41px;
+  height: 41px;
+  border: 1px solid #1d72c2;
+  border-radius: 3.5px;
+  float: right;
+  margin: -42px 8.5px;
+}
+
+.export-contactos {
+  width: 172px;
+  height: 41px;
+  border: 1px solid #1d72c2;
+  border-radius: 3.5px;
+  float: right;
+  margin-top: -42px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  line-height: 2.4;
+  color: #1d72c2;
+  cursor: pointer;
+  i {
+    line-height: 2.2;
+    color: #1d72c2;
+  }
+}
+
+.add-contactos {
+  width: 172px;
+  height: 41px;
+  border: 1px solid #1d72c2;
+  border-radius: 3.5px;
+  float: right;
+  margin: -42px 28px 0px 8.5px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  line-height: 2.4;
+  background: #1d72c2;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+// ---------------------CONTENEDOR DE EXPORTAR--------------//
+// .div-exportar {
+//   display: none;
+// }
+
+.conteiner-exportar {
+  width: 34%;
+  height: auto;
+  float: right;
+  .desplegar-exportar {
+    width: 173px;
+    height: 112px;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    margin: 4px -175px;
+    float: right;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #1d72c2;
+    display: none;
+    .div-seleccionados {
+      margin-top: 20px;
+      margin-left: 11px;
+    }
+    .div-filtrados {
+      margin-top: 26px;
+      margin-left: 11px;
+    }
+  }
+}
+
+// ESTILOS NUEVO CONTACTO //
+
+.new-contact-section {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 1;
+  .fondo-pop-up {
+    width: 1215px;
+    height: 577px;
+    background: #ffffff;
+    margin: auto;
+    .header-azul {
+      width: 1215px;
+      height: 140px;
+      background: #1d72c2;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      margin: auto;
+      .titulo-nuevo-contacto {
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        color: #ffffff;
+        margin-top: 20.7px;
+        margin-left: 31.8px;
+        margin-bottom: 98.8px;
+      }
+      #close-icon {
+        width: 14px;
+        height: 14px;
+        color: #ffffff;
+        margin-right: 35px;
+        margin-top: 35px;
+      }
+    }
+    .data-input {
+      width: 1172px;
+      height: 131px;
+      background: #ffffff;
+      border-radius: 8px;
+      border: 4px solid #0683f9;
+      margin: auto;
+      margin-top: -69px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+      .foto {
+        width: 85px;
+        height: 84px;
+        background: rgba(0, 0, 0, 0.05);
+        border: 2px solid #0683f9;
+        border-radius: 50%;
+        margin-top: 20px;
+        #user-icon {
+          font-size: 43px;
+          color: #0683f9;
+          line-height: 2;
+          margin-left: 24px;
+        }
+        .camera-conteiner {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          border: 2px solid #ffffff;
+          background: #0683f9;
+          float: right;
+          margin-top: -23px;
+          #camera-icon {
+            font-size: 10px;
+            color: #ffffff;
+            margin: 5px;
+          }
+        }
+      }
+      .datos {
+        width: 190px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 12px;
+        color: #333333;
+        margin-top: 30px;
+        span {
+          color: red;
+        }
+        .input-datos {
+          width: 190px;
+          height: 35.5px;
+          border: 1px solid #cccccc;
+          border-radius: 5px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .adicional-data-contacto {
+    width: 862px;
+    height: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    .datos {
+      width: 190px;
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      color: #333333;
+      margin-top: 30px;
+      .input-datos {
+        width: 190px;
+        height: 35.5px;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        font-size: 12px;
+        background: #cccccc;
+      }
+    }
+  }
+  .adicional-data-contactos-2 {
+    width: 1000px;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    .div-contenedor-data-2 {
+      width: 1000px;
+      height: auto;
+      display: flex;
+      flex-flow: row wrap;
+      .datos {
+        width: 190px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        color: #333333;
+        margin-top: 30px;
+        margin-left: 21px;
+        .input-datos {
+          width: 190px;
+          height: 35.5px;
+          border: 1px solid #cccccc;
+          border-radius: 5px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .btn-agregar-canal {
+    width: 143px;
+    height: 34px;
+    border-radius: 1.5px;
+    margin-top: 50px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 2.3;
+    text-align: center;
+    background: #1d72c2;
+    cursor: pointer;
+    margin-left: 21px;
+    #plus-icon {
+      font-size: 18px;
+    }
+  }
+  .btns-guardar-cancelar {
+    display: flex;
+    flex-flow: row nowrap;
+    float: right;
+    margin: 108.5px 30px 30px;
+    .btn-cancelar {
+      font-family: "Open Sans", sans-serif;
+      opacity: 0.8;
+      line-height: 2.5;
+      margin-right: 21.1px;
+    }
+    .btn-guardar-contacto {
+      font-family: "Open Sans", sans-serif;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 2px;
+      width: 173px;
+      height: 42px;
+      color: #ffffff;
+      line-height: 2.5;
+      text-align: center;
+    }
+  }
+  .adicional-data-contactos-3 {
+    width: 100%;
+    height: auto;
+    display: none;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    // display: none;
+    .datos {
+      width: 190px;
+      height: 35.5px;
+      margin-top: 30px;
+      .input-datos {
+        width: 190px;
+        height: 35.5px;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        font-size: 12px;
+        margin-left: -5px;
+      }
+    }
+    .edit-canal {
+      width: 143px;
+      height: 34px;
+      border-radius: 1.5px;
+      border: 2px solid #1d72c2;
+      margin-top: 30px;
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      color: #0683f9;
+      line-height: 2.3;
+      text-align: center;
+      background: #ffffff;
+      margin-left: -11px;
+      cursor: pointer;
+      #pencil-icon {
+        margin-left: 5px;
+      }
+    }
+    .delete-canal {
+      width: 143px;
+      height: 34px;
+      border-radius: 1.5px;
+      border: 2px solid #cccccc;
+      margin-top: 30px;
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      color: #cccccc;
+      line-height: 2.3;
+      text-align: center;
+      background: #ffffff;
+      cursor: pointer;
+    }
+  }
+}
+
+// .contacts-section {
+//   display: none;
+//   width: 95.9%;
+//   height: 624px;
+//   border: 1px solid rgba(0, 0, 0, 0.1);
+//   margin: 73px auto;
+//   .conteiner-data-titles {
+//     width: 95.9%;
+//     height: 87px;
+//     border: 1px solid rgba(0, 0, 0, 0.1);
+//     margin: auto;
+//     position: absolute;
+//     display: flex;
+//     flex-flow: row nowrap;
+//     justify-content: space-around;
+//     .conteiner-data-usuarios {
+//       display: flex;
+//       flex-flow: column nowrap;
+//       justify-content: space-between;
+//       margin-top: 31px;
+//       height: 112px;
+//       .data-usuarios {
+//         font-size: 15px;
+//         font-family: "Open Sans", sans-serif;
+//       }
+//       .titulo-data-usuarios {
+//         font-size: 20px;
+//         font-weight: bold;
+//         font-family: "Open Sans", sans-serif;
+//       }
+//     }
+//   }
+// }
+
+// SECCION DE REGIONES //
+
+.regiones-section {
+  width: 100%;
+  height: auto;
+  display: none;
+  .btn-agregar-region {
+    width: 120px;
+    height: 60px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-family: "Open Sans", sans-serif;
+    border-radius: 10px;
+    line-height: 2.9;
+    margin-left: 76.63%;
+    padding-left: 32px;
+    cursor: pointer;
+  }
+  .title-regiones {
+    font-family: "Open Sans", sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 43%;
+  }
+  .regiones-conteiner {
+    width: 70%;
+    height: 70px;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: black;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 30px auto 30px;
+    padding-left: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    line-height: 3.5;
+    transition: all ease-in 0.3s;
+    &:hover {
+      width: 73%;
+      height: 73px;
+    }
+    input {
+      font-family: "Open Sans", sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      border: none;
+    }
+    .input-texto {
+      text-decoration: none;
+      border: none;
+      font-family: "Open Sans", sans-serif;
+      font-weight: bold;
+    }
+    .conteiner-icons {
+      width: 170px;
+      height: auto;
+      display: flex;
+      justify-content: space-evenly;
+      margin: 27px 8px;
+      cursor: pointer;
+      .fa-sort-down {
+        font-size: 20px;
+        transition: all ease-in 0.3s;
+        &:hover {
+          font-size: 23px;
+          color: blue;
+        }
+      }
+      .fa-trash {
+        font-size: 20px;
+        transition: all ease-in 0.3s;
+        &:hover {
+          font-size: 23px;
+          color: blue;
+        }
+      }
+      .fa-edit {
+        font-size: 20px;
+        transition: all ease-in 0.3s;
+        &:hover {
+          font-size: 23px;
+          color: blue;
+        }
+      }
+      .fa-check-circle {
+        display: none;
+        font-size: 20px;
+        transition: all ease-in 0.3s;
+        color: green;
+        &:hover {
+          font-size: 30px;
+          color: blue;
+        }
+      }
+    }
+  }
+}
